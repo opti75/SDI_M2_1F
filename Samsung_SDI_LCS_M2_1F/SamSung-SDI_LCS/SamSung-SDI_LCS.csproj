@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3122E80-008F-4AE6-AAA7-22119B52B598}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SDI_LCS</RootNamespace>
+    <AssemblyName>SamSung-SDI_LCS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>모니터링.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="MySql.Data">
+      <HintPath>.\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XComProW_C40_01_64, Version=1.0.6131.22274, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\로비트\Robit_RCS Ver01\Robit_RCS\XComProW_C40_01_64.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AGV_Logic.cs" />
+    <Compile Include="Connect_PLC.cs" />
+    <Compile Include="Connect_TestLGV.cs" />
+    <Compile Include="cs_inifile.cs" />
+    <Compile Include="Form_Lift_Minus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Lift_Minus.Designer.cs">
+      <DependentUpon>Form_Lift_Minus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Lift_Plus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Lift_Plus.Designer.cs">
+      <DependentUpon>Form_Lift_Plus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Password.designer.cs">
+      <DependentUpon>Form_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Traffic_Dest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Traffic_Dest.Designer.cs">
+      <DependentUpon>Form_Traffic_Dest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shutter_Info.cs" />
+    <Compile Include="Shutter_C_Info.cs" />
+    <Compile Include="Connect_Shutter.cs" />
+    <Compile Include="Form_Error_Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Error_Log.Designer.cs">
+      <DependentUpon>Form_Error_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Setting_Charge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Setting_Charge.Designer.cs">
+      <DependentUpon>Form_Setting_Charge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Shutter_Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Shutter_Control.Designer.cs">
+      <DependentUpon>Form_Shutter_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Work_Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Work_Log.Designer.cs">
+      <DependentUpon>Form_Work_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Traffic_Dest.cs" />
+    <Compile Include="WorkSchedule.cs" />
+    <Compile Include="Work_Path.cs" />
+    <Compile Include="AGV_C_Info.cs" />
+    <Compile Include="Connect_LGV.cs" />
+    <Compile Include="Draw_Node_AGV.cs" />
+    <Compile Include="Form_AGV_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AGV_Info.Designer.cs">
+      <DependentUpon>Form_AGV_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Command_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Command_Info.Designer.cs">
+      <DependentUpon>Form_Command_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Insert_LGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Insert_LGV.Designer.cs">
+      <DependentUpon>Form_Insert_LGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Manual_Command.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Manual_Command.Designer.cs">
+      <DependentUpon>Form_Manual_Command.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MCS.Designer.cs">
+      <DependentUpon>Form_MCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AGV_Info.cs" />
+    <Compile Include="Command_Info.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Select_Traffic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Select_Traffic.Designer.cs">
+      <DependentUpon>Form_Select_Traffic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Traffic_Basic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Traffic_Basic.Designer.cs">
+      <DependentUpon>Form_Traffic_Basic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Traffic_Cell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Traffic_Cell.Designer.cs">
+      <DependentUpon>Form_Traffic_Cell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Work_Path_Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Work_Path_Setting.Designer.cs">
+      <DependentUpon>Form_Work_Path_Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node_DB.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Traffic.cs" />
+    <Compile Include="Traffic_Cell.cs" />
+    <Compile Include="Traffic_Info.cs" />
+    <Compile Include="Work_DB.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AGV_Info.resx">
+      <DependentUpon>Form_AGV_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Command_Info.resx">
+      <DependentUpon>Form_Command_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Error_Log.resx">
+      <DependentUpon>Form_Error_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Insert_LGV.resx">
+      <DependentUpon>Form_Insert_LGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Lift_Minus.resx">
+      <DependentUpon>Form_Lift_Minus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Lift_Plus.resx">
+      <DependentUpon>Form_Lift_Plus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Manual_Command.resx">
+      <DependentUpon>Form_Manual_Command.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MCS.resx">
+      <DependentUpon>Form_MCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Password.resx">
+      <DependentUpon>Form_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Select_Traffic.resx">
+      <DependentUpon>Form_Select_Traffic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Setting_Charge.resx">
+      <DependentUpon>Form_Setting_Charge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Shutter_Control.resx">
+      <DependentUpon>Form_Shutter_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Traffic_Basic.resx">
+      <DependentUpon>Form_Traffic_Basic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Traffic_Cell.resx">
+      <DependentUpon>Form_Traffic_Cell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Traffic_Dest.resx">
+      <DependentUpon>Form_Traffic_Dest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Work_Log.resx">
+      <DependentUpon>Form_Work_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Work_Path_Setting.resx">
+      <DependentUpon>Form_Work_Path_Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\SDI_LCS.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\SDI_LCS.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\캡처.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\캡처.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\로고.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\캡처1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\캡처2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\캡처3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\캡처4.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\캡처5.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\레이아웃.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\레이아웃_Ver02.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\레이아웃_Ver03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\캡처6.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="모니터링.ICO" />
+    <None Include="Resources\2fc2fb196832bd49_1473151582_5227_jpg.png" />
+    <None Include="Resources\1139_1194_4920.gif" />
+    <None Include="Resources\2832946_05523719233600.jpg" />
+    <None Include="Resources\캡처7.PNG" />
+    <None Include="Resources\[크기변환]캡처.PNG" />
+    <None Include="Resources\%28190515%29LayOut.jpg" />
+    <Content Include="XComProW_C40_01_64.dll" />
+    <Content Include="XComProW_M40_01_32.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
